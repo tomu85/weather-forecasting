@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather forecasting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f1f5f9;
+            padding: 20px;
+        }
+
+
+        .container {
+            max-height: 700px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .weather-card {
+            background: linear-gradient(#06b6d4);
+            color: white;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .header {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 20px;
+        }
+
+        input {
+            font-size: medium;
+            padding: 10px 20px;
+            border-radius: 20px;
+            max-width: 200px;
+            border: 2px solid black;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+            color: blue;
+            border: 2px solid black;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .current-weather {
+            margin-top: 40px;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .weather-info h2 {
+            font-size: 2.5rem;
+            margin-top: 10px;
+        }
+
+        .weather-info p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .weather-info span {
+            display: block;
+            padding-top: 10px;
+             font-size: 2.5rem;
+        }
+
+        .weather-icon {
+            font-size: 4rem;
+        }
+
+        .weather-detail {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+
+        }
+
+        .detail-card {
+            background: rgba(101, 92, 92, 0.2);
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .detail-card h3 {
+            padding-top: 10px;
+        }
+
+        .forecast-title {
+            margin: 30px 0 20px;
+            color: #334155;
+        }
+
+        .forecast-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .forecast-card {
+            background: linear-gradient(#06b6d4);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .forecast-icon {
+            font-size: 2.5rem;
+            margin: 15px 0;
+        }
+
+        .forecast-card p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+
+            <div class="weather-card">
+
+                <div class="header">
+                    <h1>Weather Forecasting</h1>
+
+                    <div class="search-box">
+                        <input type="text" placeholder="Enter the city">
+                        <button>search</button>
+                    </div>
+                </div>
+
+                <div class="current-weather">
+                    <div class="weather-info">
+                        <span>Raipur , India</span>
+                        <h2>32°C</h2>
+                        <p>Cloudy</p>
+                        
+                    </div>
+                    <div class="weather-icon">
+                        <h2> ☁️ </h2>
+                    </div>
+                </div>
+
+                <div class="weather-detail">
+                    <div class="detail-card">
+                        <p>Humidity</p>
+                        <h3>65%</h3>
+                    </div>
+
+                    <div class="detail-card">
+                        <p>Wind</p>
+                        <h3>12km/h%</h3>
+                    </div>
+
+                    <div class="detail-card">
+                        <p>Pressure</p>
+                        <h3>1012 hPa</h3>
+                    </div>
+
+                    <div class="detail-card">
+                        <p>Visibility</p>
+                        <h3>10km</h3>
+                    </div>
+                </div>
+            </div>
+
+            <h2>
+                <!-- <div class="forecast-title">5 Days Forecast</div> -->
+            </h2>
+            <div class="forecast-container">
+
+                <!-- <div class="forecast-card">
+                    <h3>Mon</h3>
+                    <div class="forecast-icon">☀️</div>
+                    <p>32°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <h3>Tue</h3>
+                    <div class="forecast-icon">☁️</div>
+                    <p>28°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <h3>Wed</h3>
+                    <div class="forecast-icon">🌧️</div>
+                    <p>25°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <h3>Thu</h3>
+                    <div class="forecast-icon">⛅</div>
+                    <p>29°C</p>
+                </div>
+
+                <div class="forecast-card">
+                    <h3>Fri</h3>
+                    <div class="forecast-icon">☀️</div>
+                    <p>33°C</p>
+                </div>
+
+ -->
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="weather2.js"></script>
+</body>
+
+</html>

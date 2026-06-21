@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-5">
+
+  <div class="w-full max-w-5xl">
+
+    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-3xl shadow-xl p-8">
+
+     
+      <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+
+        <h1 class="text-3xl font-bold">
+          Weather Forecast
+        </h1>
+
+        <div class="flex w-full md:w-auto gap-2">
+          <input type="text" placeholder="Enter city..."
+            class="flex-1 md:w-72 px-4 py-3 rounded-xl text-black outline-none">
+          <button class="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-slate-100">
+            Search
+          </button>
+        </div>
+
+      </div>
+
+  
+      <div class="mt-8 flex flex-col md:flex-row justify-between items-center">
+
+        <div>
+          <h2 class="text-5xl font-bold">32°C</h2>
+          <p class="text-xl mt-2">Cloudy</p>
+          <p class="opacity-80 mt-1">Indore, India</p>
+        </div>
+
+        <div class="text-8xl mt-5 md:mt-0">
+          ☁️
+        </div>
+
+      </div>
+
+     
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+
+        <div class="bg-white/20 rounded-xl p-4 text-center">
+          <p class="text-sm">Humidity</p>
+          <h3 class="text-xl font-bold">65%</h3>
+        </div>
+
+        <div class="bg-white/20 rounded-xl p-4 text-center">
+          <p class="text-sm">Wind</p>
+          <h3 class="text-xl font-bold">12 km/h</h3>
+        </div>
+
+        <div class="bg-white/20 rounded-xl p-4 text-center">
+          <p class="text-sm">Pressure</p>
+          <h3 class="text-xl font-bold">1012 hPa</h3>
+        </div>
+
+        <div class="bg-white/20 rounded-xl p-4 text-center">
+          <p class="text-sm">Visibility</p>
+          <h3 class="text-xl font-bold">10 km</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+    
+    <h2 class="text-2xl font-bold mt-8 mb-4 text-slate-700">
+      5 Day Forecast
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+
+      <div class="bg-white rounded-2xl shadow-md p-5 text-center">
+        <h3 class="font-semibold">Mon</h3>
+        <div class="text-4xl my-3">☀️</div>
+        <p class="font-bold">30°C</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-5 text-center">
+        <h3 class="font-semibold">Tue</h3>
+        <div class="text-4xl my-3">☁️</div>
+        <p class="font-bold">28°C</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-5 text-center">
+        <h3 class="font-semibold">Wed</h3>
+        <div class="text-4xl my-3">🌧️</div>
+        <p class="font-bold">25°C</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-5 text-center">
+        <h3 class="font-semibold">Thu</h3>
+        <div class="text-4xl my-3">⛅</div>
+        <p class="font-bold">29°C</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-5 text-center">
+        <h3 class="font-semibold">Fri</h3>
+        <div class="text-4xl my-3">☀️</div>
+        <p class="font-bold">33°C</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
